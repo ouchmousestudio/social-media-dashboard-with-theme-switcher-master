@@ -1,31 +1,32 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
+  background-color: var(--background);
 }
 
 h1, h2, h3 {
   font-weight: bold;
+  color: var(--text2);
 }
 
 h4, h6 {
   font-weight: bold;
-  color: hsl(228, 12%, 44%);
+  color: var(--text1);
 }
 
 p {
-  color: hsl(228, 12%, 44%);
+  color: var(--text1);
 }
 
-
 /* Text */
-.title-text {
+.header-text {
   font-weight: bold;
 }
 
 .account-text {
   font-weight: bold;
   font-size: 0.8rem;
-  color: hsl(228, 12%, 44%);
+  color: var(--text1);
   margin-top: 10%;
 }
 
@@ -60,7 +61,6 @@ p {
 /* Icons and Images */
 .media-icon {
   margin: 0% 3%;
-
 }
 
 /* Containers */
@@ -68,71 +68,66 @@ p {
   padding: 2% 10%;
 }
 
-.top-background {
-position: absolute;
-background-color: #F8F9FE;
-width: 100%;
-height: 35%;
-z-index: -1;
-border-radius: 25px;
+.header-background {
+  position: absolute;
+  background-color: var(--topBGPattern);
+  width: 100%;
+  height: 35%;
+  z-index: -1;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
-.light-dark-toggle {
-
-}
-
+.light-dark-slider {}
 
 /* Sections */
-.top-section {
-
-}
+.header {}
 
 /* Cards */
-.sns-card-header {
-  height: 5px;
-}
-
-.overview-card {
-  background-color: #F0F3FA;
-  vertical-align: bottom;
-}
-.overview-card:hover {
-  background: #E0E3F0;
-}
-
 .card {
   margin: 6% 0%;
-  border-color: #F0F3FA;
+  border-color: var(--cardBG);
 }
-
 
 .sns-card {
   text-align: center;
-  background-color: #F0F3FA;
+  background-color: var(--cardBG);
   margin: 0%;
   padding: 0%;
 }
 
 .sns-card:hover {
-  background: #E0E3F0;
+  background: var(--cardBGHover);
 }
 
+.overview-card {
+  background-color: var(--cardBG);
+  vertical-align: bottom;
+}
+
+.overview-card:hover {
+  background: var(--cardBGHover);
+}
+
+/* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--text1);
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--text2);
 }
 
-/* The switch - the box around the slider */
+/* Slider CSS*/
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 36px;
+  height: 20px;
 }
+
 .switch input {
   opacity: 0;
   width: 0;
@@ -154,32 +149,34 @@ border-radius: 25px;
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+input:checked+.slider {
+  background-image: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  background-color: black;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+input:checked+.slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  background-color: hsl(232, 19%, 15%);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 20px;
 }
 
 .slider.round:before {
@@ -210,6 +207,24 @@ input:checked + .slider:before {
 :root {
   --limeGreen: hsl(163, 72%, 41%);
   --brightRed: hsl(356, 69%, 56%);
+}
+
+:root[data-theme='light'] {
+  --background: hsl(0, 0%, 100%);
+  --topBGPattern: hsl(225, 100%, 98%);
+  --cardBG: hsl(227, 47%, 96%);
+  --cardBGHover: #E0E3F0;
+  --text1: hsl(228, 12%, 44%);
+  --text2: hsl(230, 17%, 14%);
+}
+
+:root[data-theme='dark'] {
+  --background: hsl(230, 17%, 14%);
+  --topBGPattern: hsl(232, 19%, 15%);
+  --cardBG: hsl(228, 28%, 20%);
+  --cardBGHover: hsl(228, 28%, 25%);
+  --text1: hsl(228, 34%, 66%);
+  --text2: hsl(0, 0%, 100%);
 }
 
 /* ## Colors
