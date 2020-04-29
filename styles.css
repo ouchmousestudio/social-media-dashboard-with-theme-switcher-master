@@ -82,7 +82,9 @@ p {
   border-bottom-right-radius: 25px;
 }
 
-.light-dark-slider {}
+.light-dark-switch {
+
+}
 
 /* Sections */
 .header {}
@@ -124,7 +126,7 @@ p {
   color: var(--text2);
 }
 
-/* Slider CSS*/
+/* Toggle Switch CSS*/
 .switch {
   position: relative;
   display: inline-block;
@@ -145,7 +147,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-image: var(--sliderBackground);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -157,14 +159,13 @@ p {
   width: 15px;
   left: 3px;
   bottom: 3px;
-  background-color: white;
+  background-color: var(--topBGPattern);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked+.slider {
-  background-image: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  background-color: black;
+  background-color: #CCCCCC;
 }
 
 input:focus+.slider {
@@ -175,7 +176,6 @@ input:checked+.slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   transform: translateX(15px);
-  background-color: hsl(232, 19%, 15%);
 }
 
 /* Rounded sliders */
@@ -220,6 +220,7 @@ input:checked+.slider:before {
   --cardBGHover: #E0E3F0;
   --text1: hsl(228, 12%, 44%);
   --text2: hsl(230, 17%, 14%);
+  --sliderBackground: hsl(227, 47%, 96%);
 }
 
 :root[data-theme='dark'] {
@@ -229,4 +230,5 @@ input:checked+.slider:before {
   --cardBGHover: hsl(228, 28%, 25%);
   --text1: hsl(228, 34%, 66%);
   --text2: hsl(0, 0%, 100%);
+  --sliderBackground: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
