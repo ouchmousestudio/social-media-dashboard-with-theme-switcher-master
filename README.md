@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Here][(https://github.com/ouchmousestudio/social-media-dashboard-with-theme-switcher-master)]
-- Live Site URL: [live Site Here][(https://social-media-dashboard-with-theme-switcher-master-tau.vercel.app/)]
+- Solution URL: [Solution Here](https://github.com/ouchmousestudio/social-media-dashboard-with-theme-switcher-master)
+- Live Site URL: [live Site Here](https://social-media-dashboard-with-theme-switcher-master-tau.vercel.app/)
 
 ## My process
 
