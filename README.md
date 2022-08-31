@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Here](https://github.com/ouchmousestudio/social-media-dashboard-with-theme-switcher-master)
+- Solution URL: [Solution Here][(https://github.com/ouchmousestudio/social-media-dashboard-with-theme-switcher-master)]
 - Live Site URL: [live Site Here][(https://social-media-dashboard-with-theme-switcher-master-tau.vercel.app/)]
 
 ## My process
@@ -42,7 +42,6 @@ I built a responsive page using bootstrap. I used javascript for the theme selec
 - CSS custom properties
 - Bootstrap
 - GoogleFonts
--
 
 ## Author
 
